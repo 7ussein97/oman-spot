@@ -1,0 +1,60 @@
+@model IEnumerable<PhotoSpotOman.Models.Category>
+@{
+    ViewData["Title"] = "Categories - PhotoSpot Oman";
+}
+
+<div class="spots-page">
+    <div class="container py-5">
+        <div class="page-header mb-4">
+            <h1 class="page-title">Categories</h1>
+            <p class="page-subtitle">Manage spot categories</p>
+            <a asp-action="Create" class="btn btn-primary-custom mt-3">
+                <i class='bx bx-plus'></i> Add New Category
+            </a>
+        </div>
+
+        @if (Model != null && Model.Any())
+        {
+            <div class="row g-4">
+                @foreach (var category in Model)
+                {
+                    <div class="col-md-6 col-lg-4">
+                        <div class="spot-card-admin">
+                            <div class="spot-card-body">
+                                <h3 class="spot-card-title">@category.Name</h3>
+                                <p class="spot-card-description">@(category.Description ?? "No description")</p>
+                                <div class="spot-card-meta">
+                                    <span><i class='bx bx-map-pin'></i> @(category.Spots?.Count ?? 0) spots</span>
+                                </div>
+                                <div class="spot-card-actions">
+                                    <a asp-action="Edit" asp-route-id="@category.Id" class="btn btn-sm btn-primary-custom">
+                                        <i class='bx bx-edit'></i> Edit
+                                    </a>
+                                    <form asp-action="Delete" method="post" class="d-inline" onsubmit="return confirm('Are you sure? This will only work if no spots are using this category.');">
+                                        <input type="hidden" name="id" value="@category.Id" />
+                                        <button type="submit" class="btn btn-sm btn-danger-custom">
+                                            <i class='bx bx-trash'></i> Delete
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="empty-state">
+                <i class='bx bx-category'></i>
+                <h3>No categories yet</h3>
+                <p>Create your first category to organize spots!</p>
+                <a asp-action="Create" class="btn btn-primary-custom mt-3">
+                    <i class='bx bx-plus'></i> Create Category
+                </a>
+            </div>
+        }
+    </div>
+</div>
+
+

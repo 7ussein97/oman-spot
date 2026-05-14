@@ -1,0 +1,342 @@
+<mxfile host="app.diagrams.net" modified="2026-01-04T12:00:00.000Z" agent="Mozilla/5.0" version="22.1.0" type="device">
+  <diagram id="dfd0" name="DFD Level 0">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Title -->
+        <mxCell id="title" value="PhotoSpotOman - Data Flow Diagram (DFD) Level 0" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=28;fontStyle=1;fontColor=#1565c0;" vertex="1" parent="1">
+          <mxGeometry x="450" y="20" width="600" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Subtitle -->
+        <mxCell id="subtitle" value="Context Diagram - Single Process View" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=14;fontStyle=2;fontColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="550" y="60" width="300" height="25" as="geometry"/>
+        </mxCell>
+        
+        <!-- ========== CENTRAL PROCESS ========== -->
+        <mxCell id="process-0" value="0&#xa;&#xa;PhotoSpotOman&#xa;Photography&#xa;Location System" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1565c0;strokeColor=#0d47a1;fontColor=#ffffff;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="400" width="180" height="180" as="geometry"/>
+        </mxCell>
+        
+        <!-- ========== EXTERNAL ENTITIES ========== -->
+        
+        <!-- Guest -->
+        <mxCell id="guest" value="Guest" style="shape=ext;double=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#757575;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="150" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Contributor -->
+        <mxCell id="contributor" value="Contributor" style="shape=ext;double=1;whiteSpace=wrap;html=1;fillColor=#c8e6c9;strokeColor=#43a047;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="460" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- Admin -->
+        <mxCell id="admin" value="Administrator" style="shape=ext;double=1;whiteSpace=wrap;html=1;fillColor=#ffcdd2;strokeColor=#e53935;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="770" width="120" height="60" as="geometry"/>
+        </mxCell>
+        
+        <!-- ========== DATA STORES ========== -->
+        
+        <!-- D1: Users -->
+        <mxCell id="d1" value="D1    Users" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=1;right=0;top=0;bottom=0;fillColor=#e8eaf6;strokeColor=#3f51b5;fontSize=12;fontStyle=1;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="150" width="150" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- D2: Spots -->
+        <mxCell id="d2" value="D2    Spots" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=1;right=0;top=0;bottom=0;fillColor=#e8eaf6;strokeColor=#3f51b5;fontSize=12;fontStyle=1;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="250" width="150" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- D3: Categories -->
+        <mxCell id="d3" value="D3    Categories" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=1;right=0;top=0;bottom=0;fillColor=#e8eaf6;strokeColor=#3f51b5;fontSize=12;fontStyle=1;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="350" width="150" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- D4: SpotImages -->
+        <mxCell id="d4" value="D4    SpotImages" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=1;right=0;top=0;bottom=0;fillColor=#e8eaf6;strokeColor=#3f51b5;fontSize=12;fontStyle=1;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="450" width="150" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- D5: Comments -->
+        <mxCell id="d5" value="D5    Comments" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=1;right=0;top=0;bottom=0;fillColor=#e8eaf6;strokeColor=#3f51b5;fontSize=12;fontStyle=1;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="550" width="150" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- D6: Likes -->
+        <mxCell id="d6" value="D6    Likes" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=1;right=0;top=0;bottom=0;fillColor=#e8eaf6;strokeColor=#3f51b5;fontSize=12;fontStyle=1;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="650" width="150" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- D7: Image Files -->
+        <mxCell id="d7" value="D7    Image Files" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=1;right=0;top=0;bottom=0;fillColor=#fff3e0;strokeColor=#f57c00;fontSize=12;fontStyle=1;align=left;spacingLeft=10;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="750" width="150" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- ========== DATA FLOWS - Guest ========== -->
+        
+        <mxCell id="df-g1" value="Browse Request" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#757575;" edge="1" parent="1">
+          <mxGeometry x="0.2" y="10" relative="1" as="geometry">
+            <mxPoint x="220" y="160" as="sourcePoint"/>
+            <mxPoint x="620" y="420" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="400" y="160"/>
+              <mxPoint x="400" y="420"/>
+            </Array>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="df-g2" value="Spots List" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#757575;" edge="1" parent="1">
+          <mxGeometry x="0.2" y="-10" relative="1" as="geometry">
+            <mxPoint x="620" y="440" as="sourcePoint"/>
+            <mxPoint x="220" y="190" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="350" y="440"/>
+              <mxPoint x="350" y="190"/>
+            </Array>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="df-g3" value="Registration Data" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#1976d2;" edge="1" parent="1">
+          <mxGeometry x="0.2" y="10" relative="1" as="geometry">
+            <mxPoint x="220" y="220" as="sourcePoint"/>
+            <mxPoint x="620" y="460" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="450" y="220"/>
+              <mxPoint x="450" y="460"/>
+            </Array>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="df-g4" value="Auth Response" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#1976d2;" edge="1" parent="1">
+          <mxGeometry x="0.2" y="-10" relative="1" as="geometry">
+            <mxPoint x="620" y="480" as="sourcePoint"/>
+            <mxPoint x="220" y="250" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="500" y="480"/>
+              <mxPoint x="500" y="250"/>
+            </Array>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- ========== DATA FLOWS - Contributor ========== -->
+        
+        <mxCell id="df-c1" value="Spot Data + Images" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#43a047;" edge="1" parent="1">
+          <mxGeometry x="0.2" y="10" relative="1" as="geometry">
+            <mxPoint x="220" y="470" as="sourcePoint"/>
+            <mxPoint x="620" y="490" as="targetPoint"/>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="df-c2" value="My Spots + Status" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#43a047;" edge="1" parent="1">
+          <mxGeometry x="0.2" y="-10" relative="1" as="geometry">
+            <mxPoint x="620" y="510" as="sourcePoint"/>
+            <mxPoint x="220" y="510" as="targetPoint"/>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="df-c3" value="Comment/Like" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#c2185b;" edge="1" parent="1">
+          <mxGeometry x="0.2" y="10" relative="1" as="geometry">
+            <mxPoint x="220" y="540" as="sourcePoint"/>
+            <mxPoint x="620" y="530" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="550" y="540"/>
+              <mxPoint x="550" y="530"/>
+            </Array>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- ========== DATA FLOWS - Admin ========== -->
+        
+        <mxCell id="df-a1" value="Approval/Rejection" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#e53935;" edge="1" parent="1">
+          <mxGeometry x="0.2" y="10" relative="1" as="geometry">
+            <mxPoint x="220" y="780" as="sourcePoint"/>
+            <mxPoint x="620" y="560" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="450" y="780"/>
+              <mxPoint x="450" y="560"/>
+            </Array>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="df-a2" value="Pending Spots List" style="endArrow=classic;html=1;strokeWidth=2;strokeColor=#e53935;" edge="1" parent="1">
+          <mxGeometry x="0.2" y="-10" relative="1" as="geometry">
+            <mxPoint x="620" y="580" as="sourcePoint"/>
+            <mxPoint x="220" y="820" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="400" y="580"/>
+              <mxPoint x="400" y="820"/>
+            </Array>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="df-a3" value="Category CRUD" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#f9a825;" edge="1" parent="1">
+          <mxGeometry x="0.2" y="0" relative="1" as="geometry">
+            <mxPoint x="220" y="850" as="sourcePoint"/>
+            <mxPoint x="620" y="600" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="500" y="850"/>
+              <mxPoint x="500" y="600"/>
+            </Array>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- ========== DATA FLOWS - Data Stores ========== -->
+        
+        <mxCell id="df-d1" value="User Read/Write" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#3f51b5;" edge="1" parent="1">
+          <mxGeometry x="0.2" y="0" relative="1" as="geometry">
+            <mxPoint x="800" y="430" as="sourcePoint"/>
+            <mxPoint x="1180" y="170" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="1000" y="430"/>
+              <mxPoint x="1000" y="170"/>
+            </Array>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="df-d2" value="Spot Read/Write" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#3f51b5;" edge="1" parent="1">
+          <mxGeometry x="0.2" y="0" relative="1" as="geometry">
+            <mxPoint x="800" y="460" as="sourcePoint"/>
+            <mxPoint x="1180" y="270" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="1050" y="460"/>
+              <mxPoint x="1050" y="270"/>
+            </Array>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="df-d3" value="Category Read/Write" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#3f51b5;" edge="1" parent="1">
+          <mxGeometry x="0.2" y="0" relative="1" as="geometry">
+            <mxPoint x="800" y="490" as="sourcePoint"/>
+            <mxPoint x="1180" y="370" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="1100" y="490"/>
+              <mxPoint x="1100" y="370"/>
+            </Array>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="df-d4" value="Image Metadata" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#3f51b5;" edge="1" parent="1">
+          <mxGeometry x="0.2" y="0" relative="1" as="geometry">
+            <mxPoint x="800" y="500" as="sourcePoint"/>
+            <mxPoint x="1180" y="470" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="1100" y="500"/>
+              <mxPoint x="1100" y="470"/>
+            </Array>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="df-d5" value="Comment R/W" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#3f51b5;" edge="1" parent="1">
+          <mxGeometry x="0.2" y="0" relative="1" as="geometry">
+            <mxPoint x="800" y="530" as="sourcePoint"/>
+            <mxPoint x="1180" y="570" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="1050" y="530"/>
+              <mxPoint x="1050" y="570"/>
+            </Array>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="df-d6" value="Like R/W" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#3f51b5;" edge="1" parent="1">
+          <mxGeometry x="0.2" y="0" relative="1" as="geometry">
+            <mxPoint x="800" y="560" as="sourcePoint"/>
+            <mxPoint x="1180" y="670" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="1000" y="560"/>
+              <mxPoint x="1000" y="670"/>
+            </Array>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <mxCell id="df-d7" value="Image Files R/W" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;strokeColor=#f57c00;" edge="1" parent="1">
+          <mxGeometry x="0.2" y="0" relative="1" as="geometry">
+            <mxPoint x="800" y="590" as="sourcePoint"/>
+            <mxPoint x="1180" y="770" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="950" y="590"/>
+              <mxPoint x="950" y="770"/>
+            </Array>
+            <mxPoint as="offset"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- ========== LEGEND ========== -->
+        <mxCell id="legend" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fafafa;strokeColor=#9e9e9e;" vertex="1" parent="1">
+          <mxGeometry x="100" y="900" width="500" height="120" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="legend-title" value="LEGEND" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="310" y="905" width="80" height="25" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="leg1" value="" style="ellipse;whiteSpace=wrap;html=1;fillColor=#1565c0;strokeColor=#0d47a1;" vertex="1" parent="1">
+          <mxGeometry x="115" y="940" width="30" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="leg1t" value="Process" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="155" y="940" width="60" height="20" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="leg2" value="" style="shape=ext;double=1;whiteSpace=wrap;html=1;fillColor=#e0e0e0;strokeColor=#757575;" vertex="1" parent="1">
+          <mxGeometry x="115" y="970" width="30" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="leg2t" value="External Entity" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="155" y="970" width="80" height="20" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="leg3" value="D#" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=1;right=0;top=0;bottom=0;fillColor=#e8eaf6;strokeColor=#3f51b5;fontSize=9;" vertex="1" parent="1">
+          <mxGeometry x="245" y="940" width="50" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="leg3t" value="Data Store" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="305" y="940" width="70" height="20" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="leg4" value="" style="endArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="245" y="980" as="sourcePoint"/>
+            <mxPoint x="290" y="980" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg4t" value="Data Flow" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="305" y="970" width="70" height="20" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="leg5" value="" style="endArrow=classic;startArrow=classic;html=1;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="400" y="950" as="sourcePoint"/>
+            <mxPoint x="445" y="950" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg5t" value="Bidirectional Flow" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="455" y="940" width="100" height="20" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="leg6t" value="R/W = Read/Write" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;fontStyle=2;" vertex="1" parent="1">
+          <mxGeometry x="400" y="970" width="100" height="20" as="geometry"/>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
+
+
+

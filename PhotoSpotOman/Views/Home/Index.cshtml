@@ -1,0 +1,213 @@
+﻿@model IEnumerable<PhotoSpotOman.Models.Spot>
+@{
+    ViewData["Title"] = "Discover Oman's Hidden Gems";
+    var popularSpots = ViewBag.PopularSpots as List<PhotoSpotOman.Models.Spot> ?? new List<PhotoSpotOman.Models.Spot>();
+}
+
+<section class="hero-section">
+    <div class="hero-content">
+        <div class="hero-badge">
+            <i class='bx bx-navigation'></i>
+            Discover Hidden Gems in Oman
+        </div>
+
+       
+        <p class="hero-subtitle">
+            Explore Oman's most stunning locations for photography, camping, and adventure.
+            Your gateway to unforgettable experiences.
+        </p>
+        <h1 class="hero-title">PhotoSpot Oman</h1>
+
+        <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center">
+            @if (User.Identity != null && User.Identity.IsAuthenticated)
+            {
+                <a asp-controller="Spot" asp-action="MySpot" class="btn btn-primary-custom">
+                    My Spots
+                    <i class='bx bx-right-arrow-alt'></i>
+                </a>
+                <a asp-controller="Spot" asp-action="Create" class="btn btn-secondary-custom">
+                    Add New Spot
+                    <i class='bx bx-plus'></i>
+                </a>
+            }
+            else
+            {
+                <a asp-controller="Login" asp-action="Index" class="btn btn-primary-custom">
+                    Get Started
+                    <i class='bx bx-right-arrow-alt'></i>
+                </a>
+                <a asp-controller="Spot" asp-action="Index" class="btn btn-secondary-custom">
+                    Explore Spots
+                    <i class='bx bx-map'></i>
+                </a>
+            }
+        </div>
+    </div>
+
+    <div class="scroll-indicator">
+        <div class="scroll-indicator-border">
+            <div class="scroll-indicator-dot"></div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="features-section">
+    <div class="container">
+        <h2 class="section-title">What You'll Discover</h2>
+        <p class="section-subtitle">Everything you need for your next adventure</p>
+
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class='bx bx-camera'></i>
+                    </div>
+                    <h3 class="feature-title">Photography Spots</h3>
+                    <p class="feature-description">
+                        Discover breathtaking locations perfect for capturing Oman's natural beauty
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class='bx bx-shape-triangle'></i>
+                    </div>
+                    <h3 class="feature-title">Camping Sites</h3>
+                    <p class="feature-description">
+                        Find ideal camping spots under the stars in Oman's pristine wilderness
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class='bx bx-trip'></i>
+                    </div>
+                    <h3 class="feature-title">Adventure Trails</h3>
+                    <p class="feature-description">
+                        Explore hiking paths and trails through mountains and wadis
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class='bx bx-sun'></i>
+                    </div>
+                    <h3 class="feature-title">Scenic Views</h3>
+                    <p class="feature-description">
+                        Experience sunrise and sunset at the most spectacular viewpoints
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Popular Spots Section -->
+<section class="spots-section">
+    <div class="container">
+        <h2 class="section-title">Popular Destinations</h2>
+        <p class="section-subtitle">Start your journey at these amazing locations</p>
+
+        @if (popularSpots.Any())
+        {
+            <div class="row g-4">
+                @foreach (var spot in popularSpots)
+                {
+                    <div class="col-md-4">
+                        <a asp-controller="Spot" asp-action="Details" asp-route-id="@spot.Id" class="spot-card-link">
+                            <div class="spot-card">
+                                @if (spot.Images != null && spot.Images.Any())
+                                {
+                                    <img src="@spot.Images.First().ImagePath" alt="@spot.Name">
+                                }
+                                else
+                                {
+                                    <div class="spot-card-no-image">
+                                        <i class='bx bx-image'></i>
+                                    </div>
+                                }
+                                <div class="spot-overlay"></div>
+                                <div class="spot-content">
+                                    <div class="spot-rating">
+                                        <i class='bx bx-heart'></i>
+                                        <span class="ms-2">@(spot.Likes?.Count ?? 0) likes</span>
+                                    </div>
+                                    <h3 class="spot-name">@spot.Name</h3>
+                                    <p class="spot-type">
+                                        <i class='bx bx-map'></i>
+                                        @(spot.Category?.Name ?? "Uncategorized")
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="empty-state">
+                <i class='bx bx-map'></i>
+                <h3>No spots yet</h3>
+                <p>Be the first to share a photo spot in Oman!</p>
+                @if (User.Identity != null && User.Identity.IsAuthenticated)
+                {
+                    <a asp-controller="Spot" asp-action="Create" class="btn btn-primary-custom">
+                        <i class='bx bx-plus'></i> Create First Spot
+                    </a>
+                }
+            </div>
+        }
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-card">
+            <i class='bx bx-compass cta-icon'></i>
+            <h2 class="cta-title">Ready to Start Exploring?</h2>
+            <p class="cta-description">
+                Join our community of adventurers and photographers discovering Oman's hidden treasures
+            </p>
+            @if (User.Identity != null && User.Identity.IsAuthenticated)
+            {
+                <a asp-controller="Spot" asp-action="Create" class="btn btn-primary-custom">
+                    Add New Spot
+                    <i class='bx bx-right-arrow-alt'></i>
+                </a>
+            }
+            else
+            {
+                <a asp-controller="Login" asp-action="Index" class="btn btn-primary-custom">
+                    Get Started
+                    <i class='bx bx-right-arrow-alt'></i>
+                </a>
+            }
+        </div>
+    </div>
+</section>
+
+
+
+<script>
+    // Smooth scroll for better UX
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+</script>

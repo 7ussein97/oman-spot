@@ -1,0 +1,435 @@
+@model PhotoSpotOman.Models.Spot
+@{
+    ViewData["Title"] = "Edit Spot - PhotoSpot Oman";
+    var categories = ViewBag.Categories as List<PhotoSpotOman.Models.Category>;
+}
+
+<div class="create-spot-page">
+    <div class="container py-5">
+        <div class="page-header mb-4">
+            <h1 class="page-title">Edit Spot</h1>
+            <p class="page-subtitle">Update your photo spot information</p>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="form-card">
+                    <form asp-action="Edit" method="post" enctype="multipart/form-data">
+                        <input type="hidden" asp-for="Id" />
+                        <input type="hidden" asp-for="AddedBy" />
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <input type="hidden" asp-for="Status" />
+                        }
+                        else
+                        {
+                            <input type="hidden" asp-for="Status" value="@Model.Status" />
+                        }
+
+                        <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
+
+                        <div class="form-group">
+                            <label asp-for="Name" class="form-label">
+                                <i class='bx bx-rename'></i> Spot Name *
+                            </label>
+                            <input asp-for="Name" class="form-control-custom" required />
+                            <span asp-validation-for="Name" class="text-danger"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label asp-for="Description" class="form-label">
+                                <i class='bx bx-text'></i> Description *
+                            </label>
+                            <textarea asp-for="Description" class="form-control-custom" rows="5" required></textarea>
+                            <span asp-validation-for="Description" class="text-danger"></span>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="CategoryId" class="form-label">
+                                        <i class='bx bx-category'></i> Category
+                                    </label>
+                                    <select asp-for="CategoryId" class="form-control-custom">
+                                        <option value="">Select Category</option>
+                                        @foreach (var cat in categories)
+                                        {
+                                            <option value="@cat.Id" selected="@(Model.CategoryId == cat.Id)">@cat.Name</option>
+                                        }
+                                    </select>
+                                    <span asp-validation-for="CategoryId" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label asp-for="Region" class="form-label">
+                                        <i class='bx bx-map'></i> Region
+                                    </label>
+                                    <input asp-for="Region" class="form-control-custom" />
+                                    <span asp-validation-for="Region" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <div class="form-group">
+                                <label asp-for="Status" class="form-label">
+                                    <i class='bx bx-check-circle'></i> Status
+                                </label>
+                                <select asp-for="Status" class="form-control-custom">
+                                    <option value="pending">Pending</option>
+                                    <option value="approved">Approved</option>
+                                    <option value="rejected">Rejected</option>
+                                </select>
+                                <span asp-validation-for="Status" class="text-danger"></span>
+                            </div>
+                        }
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class='bx bx-map-pin'></i> Location *
+                            </label>
+                            <div class="map-container mb-3">
+                                <div id="map" style="height: 400px; border-radius: 12px; overflow: hidden;"></div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <input asp-for="Latitude" class="form-control-custom" id="latitude" readonly required />
+                                    <span asp-validation-for="Latitude" class="text-danger"></span>
+                                </div>
+                                <div class="col-md-4">
+                                    <input asp-for="Longitude" class="form-control-custom" id="longitude" readonly required />
+                                    <span asp-validation-for="Longitude" class="text-danger"></span>
+                                </div>
+                                <div class="col-md-4">
+                                    <input asp-for="LocationName" class="form-control-custom" id="locationName" />
+                                    <span asp-validation-for="LocationName" class="text-danger"></span>
+                                </div>
+                            </div>
+                            <small class="form-hint">Click on the map to update the location</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class='bx bx-search'></i> Search Location
+                            </label>
+                            <div class="row g-2">
+                                <div class="col-md-9">
+                                    <input type="text" id="locationSearch" class="form-control-custom" placeholder="Search for a location in Oman..." />
+                                </div>
+                                <div class="col-md-3">
+                                    <button type="button" id="searchBtn" class="btn btn-primary-custom w-100">
+                                        <i class='bx bx-search'></i> Search
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="button" id="getMyLocationBtn" class="btn btn-secondary-custom">
+                                <i class='bx bx-current-location'></i> Get My Current Location
+                            </button>
+                            <small class="form-hint d-block mt-2">Click to use your device's GPS location for accurate positioning</small>
+                        </div>
+
+                        <!-- Existing Images -->
+                        @if (Model.Images != null && Model.Images.Any())
+                        {
+                            <div class="form-group">
+                                <label class="form-label">
+                                    <i class='bx bx-images'></i> Current Images
+                                </label>
+                                <div class="existing-images-grid">
+                                    @foreach (var image in Model.Images)
+                                    {
+                                        <div class="image-item">
+                                            <img src="@image.ImagePath" alt="Spot image" />
+                                            <button type="button" class="delete-image-btn" data-image-id="@image.Id">
+                                                <i class='bx bx-trash'></i>
+                                            </button>
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        }
+
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class='bx bx-images'></i> Add More Images
+                            </label>
+                            <input type="file" name="newImages" class="form-control-custom" multiple accept="image/*" />
+                            <small class="form-hint">You can upload additional images</small>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary-custom">
+                                <i class='bx bx-check'></i> Update Spot
+                            </button>
+                            <a asp-action="MySpot" class="btn btn-secondary-custom">
+                                <i class='bx bx-x'></i> Cancel
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+
+    <script>
+        // Initialize map with existing location
+        var lat = @Model.Latitude;
+        var lng = @Model.Longitude;
+        var map = L.map('map').setView([lat, lng], 13);
+
+        // Add OpenStreetMap tile layer
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '© OpenStreetMap contributors',
+            maxZoom: 19
+        }).addTo(map);
+
+        var marker = L.marker([lat, lng]).addTo(map);
+
+        // Add click event to map
+        map.on('click', function(e) {
+            var newLat = e.latlng.lat;
+            var newLng = e.latlng.lng;
+
+            // Update form fields
+            document.getElementById('latitude').value = newLat.toFixed(6);
+            document.getElementById('longitude').value = newLng.toFixed(6);
+
+            // Update marker
+            marker.setLatLng([newLat, newLng]);
+            
+            // Reverse geocode
+            reverseGeocode(newLat, newLng);
+        });
+
+        // Reverse geocoding
+        function reverseGeocode(lat, lng) {
+            fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&zoom=18&addressdetails=1`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data && data.display_name) {
+                        document.getElementById('locationName').value = data.display_name;
+                    }
+                })
+                .catch(error => console.error('Geocoding error:', error));
+        }
+
+        // Location search
+        document.getElementById('searchBtn').addEventListener('click', function() {
+            var query = document.getElementById('locationSearch').value;
+            if (!query) return;
+
+            fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query + ', Oman')}&limit=1`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data && data.length > 0) {
+                        var newLat = parseFloat(data[0].lat);
+                        var newLng = parseFloat(data[0].lon);
+
+                        document.getElementById('latitude').value = newLat.toFixed(6);
+                        document.getElementById('longitude').value = newLng.toFixed(6);
+                        document.getElementById('locationName').value = data[0].display_name;
+
+                        map.setView([newLat, newLng], 15);
+                        marker.setLatLng([newLat, newLng]);
+                    } else {
+                        Swal.fire({
+                            title: 'Location not found',
+                            text: 'Please try a different search term.',
+                            icon: 'warning',
+                            customClass: { confirmButton: 'btn btn-primary' },
+                            buttonsStyling: false
+                        });
+                    }
+                })
+                .catch(error => {
+                    console.error('Search error:', error);
+                    Swal.fire({
+                        title: 'Error',
+                        text: 'An error occurred while searching.',
+                        icon: 'error',
+                        customClass: { confirmButton: 'btn btn-primary' },
+                        buttonsStyling: false
+                    });
+                });
+        });
+
+        document.getElementById('locationSearch').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                document.getElementById('searchBtn').click();
+            }
+        });
+
+        // Get current location
+        document.getElementById('getMyLocationBtn').addEventListener('click', function() {
+            if (!navigator.geolocation) {
+                Swal.fire({
+                    title: 'Not Supported',
+                    text: 'Geolocation is not supported by your browser.',
+                    icon: 'error',
+                    customClass: {
+                        confirmButton: 'btn btn-primary'
+                    },
+                    buttonsStyling: false
+                });
+                return;
+            }
+
+            var btn = this;
+            var originalText = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = '<i class="bx bx-loader-alt bx-spin"></i> Getting location...';
+
+            navigator.geolocation.getCurrentPosition(
+                function(position) {
+                    var lat = position.coords.latitude;
+                    var lng = position.coords.longitude;
+
+                    // Update form fields
+                    document.getElementById('latitude').value = lat.toFixed(6);
+                    document.getElementById('longitude').value = lng.toFixed(6);
+
+                    // Update map
+                    map.setView([lat, lng], 15);
+                    
+                    // Update marker
+                    marker.setLatLng([lat, lng]);
+
+                    // Reverse geocode to get address
+                    fetch(`https://nominatim.openstreetmap.org/reverse?format=json&lat=${lat}&lon=${lng}&zoom=18&addressdetails=1`)
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data && data.display_name) {
+                                document.getElementById('locationName').value = data.display_name;
+                            }
+                        })
+                        .catch(error => console.error('Geocoding error:', error));
+
+                    btn.disabled = false;
+                    btn.innerHTML = originalText;
+
+                    Swal.fire({
+                        title: 'Location Found!',
+                        text: 'Your current location has been set.',
+                        icon: 'success',
+                        customClass: {
+                            confirmButton: 'btn btn-primary'
+                        },
+                        buttonsStyling: false
+                    });
+                },
+                function(error) {
+                    btn.disabled = false;
+                    btn.innerHTML = originalText;
+
+                    var errorMessage = 'Unable to retrieve your location.';
+                    switch(error.code) {
+                        case error.PERMISSION_DENIED:
+                            errorMessage = 'Location access denied by user. Please enable location permissions.';
+                            break;
+                        case error.POSITION_UNAVAILABLE:
+                            errorMessage = 'Location information is unavailable.';
+                            break;
+                        case error.TIMEOUT:
+                            errorMessage = 'The request to get user location timed out.';
+                            break;
+                    }
+
+                    Swal.fire({
+                        title: 'Location Error',
+                        text: errorMessage,
+                        icon: 'error',
+                        customClass: {
+                            confirmButton: 'btn btn-primary'
+                        },
+                        buttonsStyling: false
+                    });
+                },
+                {
+                    enableHighAccuracy: true,
+                    timeout: 10000,
+                    maximumAge: 0
+                }
+            );
+        });
+
+        // Delete image
+        document.querySelectorAll('.delete-image-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                var imageId = this.getAttribute('data-image-id');
+                var imageItem = this.closest('.image-item');
+
+                Swal.fire({
+                    title: 'Delete Image?',
+                    text: 'Are you sure you want to delete this image?',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonText: 'Yes, delete it',
+                    cancelButtonText: 'Cancel',
+                    customClass: {
+                        confirmButton: 'btn btn-primary',
+                        cancelButton: 'btn btn-secondary-custom'
+                    },
+                    buttonsStyling: false
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        fetch('/Spot/DeleteImage', {
+                            method: 'POST',
+                            headers: {
+                                'Content-Type': 'application/x-www-form-urlencoded',
+                                'RequestVerificationToken': document.querySelector('input[name="__RequestVerificationToken"]').value
+                            },
+                            body: `id=${imageId}`
+                        })
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.success) {
+                                imageItem.remove();
+                                Swal.fire({
+                                    title: 'Deleted!',
+                                    text: data.message,
+                                    icon: 'success',
+                                    customClass: { confirmButton: 'btn btn-primary' },
+                                    buttonsStyling: false
+                                });
+                            } else {
+                                Swal.fire({
+                                    title: 'Error',
+                                    text: data.message,
+                                    icon: 'error',
+                                    customClass: { confirmButton: 'btn btn-primary' },
+                                    buttonsStyling: false
+                                });
+                            }
+                        })
+                        .catch(error => {
+                            console.error('Error:', error);
+                            Swal.fire({
+                                title: 'Error',
+                                text: 'An error occurred while deleting the image.',
+                                icon: 'error',
+                                customClass: { confirmButton: 'btn btn-primary' },
+                                buttonsStyling: false
+                            });
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+}
+

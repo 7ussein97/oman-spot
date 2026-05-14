@@ -1,0 +1,172 @@
+@model IEnumerable<PhotoSpotOman.Models.Spot>
+@{
+    ViewData["Title"] = "All Spots - PhotoSpot Oman";
+    var categories = ViewBag.Categories as List<PhotoSpotOman.Models.Category>;
+    var status = ViewBag.Status as string ?? "all";
+    var search = ViewBag.Search as string;
+    var categoryId = ViewBag.CategoryId as int?;
+}
+
+<div class="spots-page">
+    <div class="container py-5">
+        <div class="page-header mb-4">
+            <h1 class="page-title">All Spots</h1>
+            <p class="page-subtitle">Manage and moderate photo spots</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters-card mb-4">
+            <form method="get" class="row g-3">
+                @if (User.IsInRole("Admin"))
+                {
+                    <div class="col-md-4">
+                        <label class="form-label">Status</label>
+                        <select name="status" class="form-control-custom">
+                            @if (status == "all")
+                            {
+                                <option value="all" selected>All Status</option>
+                            }
+                            else
+                            {
+                                <option value="all">All Status</option>
+                            }
+                            @if (status == "pending")
+                            {
+                                <option value="pending" selected>Pending</option>
+                            }
+                            else
+                            {
+                                <option value="pending">Pending</option>
+                            }
+                            @if (status == "approved")
+                            {
+                                <option value="approved" selected>Approved</option>
+                            }
+                            else
+                            {
+                                <option value="approved">Approved</option>
+                            }
+                            @if (status == "rejected")
+                            {
+                                <option value="rejected" selected>Rejected</option>
+                            }
+                            else
+                            {
+                                <option value="rejected">Rejected</option>
+                            }
+                        </select>
+                    </div>
+                }
+                <div class="@(User.IsInRole("Admin") ? "col-md-4" : "col-md-6")">
+                    <label class="form-label">Category</label>
+                    <select name="categoryId" class="form-control-custom">
+                        <option value="">All Categories</option>
+                        @foreach (var cat in categories)
+                        {
+                            @if (categoryId == cat.Id)
+                            {
+                                <option value="@cat.Id" selected>@cat.Name</option>
+                            }
+                            else
+                            {
+                                <option value="@cat.Id">@cat.Name</option>
+                            }
+                        }
+                    </select>
+                </div>
+                <div class="@(User.IsInRole("Admin") ? "col-md-4" : "col-md-6")">
+                    <label class="form-label">Search</label>
+                    <input type="text" name="search" class="form-control-custom" placeholder="Search spots..." value="@search" />
+                </div>
+                <div class="col-12">
+                    <button type="submit" class="btn btn-primary-custom">
+                        <i class='bx bx-search'></i> Filter
+                    </button>
+                    <a asp-action="Index" class="btn btn-secondary-custom ms-2">
+                        <i class='bx bx-refresh'></i> Reset
+                    </a>
+                </div>
+            </form>
+        </div>
+
+        <!-- Spots Grid -->
+        @if (Model != null && Model.Any())
+        {
+            <div class="row g-4">
+                @foreach (var spot in Model)
+                {
+                    <div class="col-md-6 col-lg-4">
+                        <div class="spot-card-admin">
+                            @if (spot.Images != null && spot.Images.Any())
+                            {
+                                <div class="spot-image-wrapper">
+                                    <img src="@spot.Images.First().ImagePath" alt="@spot.Name" />
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        <div class="spot-status-badge status-@spot.Status.ToLower()">
+                                            @spot.Status
+                                        </div>
+                                    }
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="spot-image-wrapper no-image">
+                                    <i class='bx bx-image'></i>
+                                    @if (User.IsInRole("Admin"))
+                                    {
+                                        <div class="spot-status-badge status-@spot.Status.ToLower()">
+                                            @spot.Status
+                                        </div>
+                                    }
+                                </div>
+                            }
+
+                            <div class="spot-card-body">
+                                <h3 class="spot-card-title">@spot.Name</h3>
+                                <p class="spot-card-description">@(spot.Description.Length > 100 ? spot.Description.Substring(0, 100) + "..." : spot.Description)</p>
+                                
+                                <div class="spot-card-meta">
+                                    <span><i class='bx bx-user'></i> @spot.User?.Name</span>
+                                    <span><i class='bx bx-category'></i> @spot.Category?.Name</span>
+                                    <span><i class='bx bx-heart'></i> @(spot.Likes?.Count ?? 0)</span>
+                                    <span><i class='bx bx-comment'></i> @(spot.Comments?.Count ?? 0)</span>
+                                </div>
+
+                                <div class="spot-card-actions">
+                                    <a asp-action="Details" asp-route-id="@spot.Id" class="btn btn-sm btn-primary-custom">
+                                        <i class='bx bx-show'></i> View
+                                    </a>
+                                    @if (User.IsInRole("Admin") && spot.Status == "pending")
+                                    {
+                                        <form asp-action="Approve" method="post" class="d-inline">
+                                            <input type="hidden" name="id" value="@spot.Id" />
+                                            <button type="submit" class="btn btn-sm btn-success-custom">
+                                                <i class='bx bx-check'></i> Approve
+                                            </button>
+                                        </form>
+                                        <form asp-action="Reject" method="post" class="d-inline">
+                                            <input type="hidden" name="id" value="@spot.Id" />
+                                            <button type="submit" class="btn btn-sm btn-danger-custom">
+                                                <i class='bx bx-x'></i> Reject
+                                            </button>
+                                        </form>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="empty-state">
+                <i class='bx bx-map'></i>
+                <h3>No spots found</h3>
+                <p>Try adjusting your filters or create a new spot.</p>
+            </div>
+        }
+    </div>
+</div>
+

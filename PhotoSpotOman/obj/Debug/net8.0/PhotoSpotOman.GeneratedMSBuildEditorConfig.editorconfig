@@ -1,0 +1,99 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.TargetFrameworkIdentifier = .NETCoreApp
+build_property.TargetFrameworkVersion = v8.0
+build_property.RootNamespace = PhotoSpotOman
+build_property.RootNamespace = PhotoSpotOman
+build_property.ProjectDir = C:\Users\hussein.alghafri\source\repos\PhotoSpotOman\PhotoSpotOman\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\hussein.alghafri\source\repos\PhotoSpotOman\PhotoSpotOman
+build_property._RazorSourceGeneratorDebug = 
+build_property.EffectiveAnalysisLevelStyle = 8.0
+build_property.EnableCodeStyleSeverity = 
+
+[C:/Users/hussein.alghafri/source/repos/PhotoSpotOman/PhotoSpotOman/Views/Category/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hussein.alghafri/source/repos/PhotoSpotOman/PhotoSpotOman/Views/Category/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hussein.alghafri/source/repos/PhotoSpotOman/PhotoSpotOman/Views/Category/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcnlcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hussein.alghafri/source/repos/PhotoSpotOman/PhotoSpotOman/Views/Feedbacks/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRmVlZGJhY2tzXEluZGV4LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hussein.alghafri/source/repos/PhotoSpotOman/PhotoSpotOman/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hussein.alghafri/source/repos/PhotoSpotOman/PhotoSpotOman/Views/Login/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hussein.alghafri/source/repos/PhotoSpotOman/PhotoSpotOman/Views/Page/Forbidden.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZVxGb3JiaWRkZW4uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hussein.alghafri/source/repos/PhotoSpotOman/PhotoSpotOman/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hussein.alghafri/source/repos/PhotoSpotOman/PhotoSpotOman/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hussein.alghafri/source/repos/PhotoSpotOman/PhotoSpotOman/Views/Spot/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3BvdFxDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hussein.alghafri/source/repos/PhotoSpotOman/PhotoSpotOman/Views/Spot/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3BvdFxEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hussein.alghafri/source/repos/PhotoSpotOman/PhotoSpotOman/Views/Spot/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3BvdFxFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hussein.alghafri/source/repos/PhotoSpotOman/PhotoSpotOman/Views/Spot/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3BvdFxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hussein.alghafri/source/repos/PhotoSpotOman/PhotoSpotOman/Views/Spot/MySpot.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU3BvdFxNeVNwb3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hussein.alghafri/source/repos/PhotoSpotOman/PhotoSpotOman/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hussein.alghafri/source/repos/PhotoSpotOman/PhotoSpotOman/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/hussein.alghafri/source/repos/PhotoSpotOman/PhotoSpotOman/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-ya3aswhslq

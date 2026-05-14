@@ -1,0 +1,351 @@
+<mxfile host="app.diagrams.net" modified="2026-01-04T12:00:00.000Z" agent="Mozilla/5.0" version="22.1.0" type="device">
+  <diagram id="erd" name="Entity Relationship Diagram">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="1000" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- Title -->
+        <mxCell id="title" value="PhotoSpotOman - Entity Relationship Diagram (ERD)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=28;fontStyle=1;fontColor=#1565c0;" vertex="1" parent="1">
+          <mxGeometry x="450" y="20" width="600" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- ========== USER ENTITY ========== -->
+        <mxCell id="user-entity" value="USER" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#c8e6c9;strokeColor=#43a047;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="80" y="300" width="220" height="230" as="geometry"/>
+        </mxCell>
+        <mxCell id="user-pk" value="🔑 Id : int (PK)" style="text;strokeColor=none;fillColor=#a5d6a7;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" vertex="1" parent="user-entity">
+          <mxGeometry y="30" width="220" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="user-div" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#43a047;" vertex="1" parent="user-entity">
+          <mxGeometry y="55" width="220" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="user-name" value="   Name : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="user-entity">
+          <mxGeometry y="63" width="220" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="user-email" value="   Email : string (Unique)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="user-entity">
+          <mxGeometry y="85" width="220" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="user-pwd" value="   Password : string (Hashed)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="user-entity">
+          <mxGeometry y="107" width="220" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="user-role" value="   Role : string (Admin/Contributor)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="user-entity">
+          <mxGeometry y="129" width="220" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="user-active" value="   IsActive : bool" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="user-entity">
+          <mxGeometry y="151" width="220" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="user-created" value="   CreatedAt : DateTime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="user-entity">
+          <mxGeometry y="173" width="220" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="user-updated" value="   UpdatedAt : DateTime?" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="user-entity">
+          <mxGeometry y="195" width="220" height="22" as="geometry"/>
+        </mxCell>
+        
+        <!-- ========== CATEGORY ENTITY ========== -->
+        <mxCell id="cat-entity" value="CATEGORY" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#fff9c4;strokeColor=#f9a825;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="440" y="120" width="200" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="cat-pk" value="🔑 Id : int (PK)" style="text;strokeColor=none;fillColor=#fff59d;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" vertex="1" parent="cat-entity">
+          <mxGeometry y="30" width="200" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="cat-div" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#f9a825;" vertex="1" parent="cat-entity">
+          <mxGeometry y="55" width="200" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="cat-name" value="   Name : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="cat-entity">
+          <mxGeometry y="63" width="200" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="cat-desc" value="   Description : string?" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="cat-entity">
+          <mxGeometry y="88" width="200" height="25" as="geometry"/>
+        </mxCell>
+        
+        <!-- ========== SPOT ENTITY ========== -->
+        <mxCell id="spot-entity" value="SPOT" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#bbdefb;strokeColor=#1976d2;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="700" y="300" width="250" height="280" as="geometry"/>
+        </mxCell>
+        <mxCell id="spot-pk" value="🔑 Id : int (PK)" style="text;strokeColor=none;fillColor=#90caf9;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" vertex="1" parent="spot-entity">
+          <mxGeometry y="30" width="250" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="spot-div" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#1976d2;" vertex="1" parent="spot-entity">
+          <mxGeometry y="55" width="250" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="spot-name" value="   Name : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="spot-entity">
+          <mxGeometry y="63" width="250" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="spot-desc" value="   Description : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="spot-entity">
+          <mxGeometry y="85" width="250" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="spot-loc" value="   LocationName : string?" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="spot-entity">
+          <mxGeometry y="107" width="250" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="spot-lat" value="   Latitude : double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="spot-entity">
+          <mxGeometry y="129" width="250" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="spot-long" value="   Longitude : double" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="spot-entity">
+          <mxGeometry y="151" width="250" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="spot-region" value="   Region : string?" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="spot-entity">
+          <mxGeometry y="173" width="250" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="spot-status" value="   Status : string (pending/approved/rejected)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=10;" vertex="1" parent="spot-entity">
+          <mxGeometry y="195" width="250" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="spot-fk1" value="🔗 AddedBy : int (FK → User.Id)" style="text;strokeColor=none;fillColor=#e3f2fd;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1565c0;fontSize=11;" vertex="1" parent="spot-entity">
+          <mxGeometry y="217" width="250" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="spot-fk2" value="🔗 CategoryId : int? (FK → Category.Id)" style="text;strokeColor=none;fillColor=#e3f2fd;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#1565c0;fontSize=11;" vertex="1" parent="spot-entity">
+          <mxGeometry y="242" width="250" height="25" as="geometry"/>
+        </mxCell>
+        
+        <!-- ========== SPOT_IMAGE ENTITY ========== -->
+        <mxCell id="img-entity" value="SPOT_IMAGE" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#ffe0b2;strokeColor=#f57c00;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="300" width="230" height="145" as="geometry"/>
+        </mxCell>
+        <mxCell id="img-pk" value="🔑 Id : int (PK)" style="text;strokeColor=none;fillColor=#ffcc80;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" vertex="1" parent="img-entity">
+          <mxGeometry y="30" width="230" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="img-div" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#f57c00;" vertex="1" parent="img-entity">
+          <mxGeometry y="55" width="230" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="img-path" value="   ImagePath : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="img-entity">
+          <mxGeometry y="63" width="230" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="img-fk1" value="🔗 SpotId : int (FK → Spot.Id)" style="text;strokeColor=none;fillColor=#fff3e0;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e65100;fontSize=11;" vertex="1" parent="img-entity">
+          <mxGeometry y="85" width="230" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="img-fk2" value="🔗 UploadedBy : int (FK → User.Id)" style="text;strokeColor=none;fillColor=#fff3e0;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#e65100;fontSize=11;" vertex="1" parent="img-entity">
+          <mxGeometry y="110" width="230" height="25" as="geometry"/>
+        </mxCell>
+        
+        <!-- ========== COMMENT ENTITY ========== -->
+        <mxCell id="comment-entity" value="COMMENT" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#f8bbd9;strokeColor=#c2185b;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="440" y="640" width="220" height="165" as="geometry"/>
+        </mxCell>
+        <mxCell id="comment-pk" value="🔑 Id : int (PK)" style="text;strokeColor=none;fillColor=#f48fb1;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" vertex="1" parent="comment-entity">
+          <mxGeometry y="30" width="220" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="comment-div" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#c2185b;" vertex="1" parent="comment-entity">
+          <mxGeometry y="55" width="220" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="comment-content" value="   Content : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="comment-entity">
+          <mxGeometry y="63" width="220" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="comment-created" value="   CreatedAt : DateTime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="comment-entity">
+          <mxGeometry y="85" width="220" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="comment-fk1" value="🔗 UserId : int (FK → User.Id)" style="text;strokeColor=none;fillColor=#fce4ec;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#880e4f;fontSize=11;" vertex="1" parent="comment-entity">
+          <mxGeometry y="107" width="220" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="comment-fk2" value="🔗 SpotId : int (FK → Spot.Id)" style="text;strokeColor=none;fillColor=#fce4ec;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#880e4f;fontSize=11;" vertex="1" parent="comment-entity">
+          <mxGeometry y="132" width="220" height="25" as="geometry"/>
+        </mxCell>
+        
+        <!-- ========== LIKE ENTITY ========== -->
+        <mxCell id="like-entity" value="LIKE" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#e1bee7;strokeColor=#8e24aa;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="720" y="640" width="200" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="like-pk" value="🔑 Id : int (PK)" style="text;strokeColor=none;fillColor=#ce93d8;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" vertex="1" parent="like-entity">
+          <mxGeometry y="30" width="200" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="like-div" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#8e24aa;" vertex="1" parent="like-entity">
+          <mxGeometry y="55" width="200" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="like-fk1" value="🔗 UserId : int (FK → User.Id)" style="text;strokeColor=none;fillColor=#f3e5f5;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#4a148c;fontSize=11;" vertex="1" parent="like-entity">
+          <mxGeometry y="63" width="200" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="like-fk2" value="🔗 SpotId : int (FK → Spot.Id)" style="text;strokeColor=none;fillColor=#f3e5f5;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#4a148c;fontSize=11;" vertex="1" parent="like-entity">
+          <mxGeometry y="88" width="200" height="25" as="geometry"/>
+        </mxCell>
+        
+        <!-- ========== REPORT ENTITY ========== -->
+        <mxCell id="report-entity" value="REPORT" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;marginBottom=0;fillColor=#ffcdd2;strokeColor=#e53935;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="990" y="640" width="230" height="190" as="geometry"/>
+        </mxCell>
+        <mxCell id="report-pk" value="🔑 Id : int (PK)" style="text;strokeColor=none;fillColor=#ef9a9a;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontStyle=1;fontSize=11;" vertex="1" parent="report-entity">
+          <mxGeometry y="30" width="230" height="25" as="geometry"/>
+        </mxCell>
+        <mxCell id="report-div" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#e53935;" vertex="1" parent="report-entity">
+          <mxGeometry y="55" width="230" height="8" as="geometry"/>
+        </mxCell>
+        <mxCell id="report-reason" value="   Reason : string" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="report-entity">
+          <mxGeometry y="63" width="230" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="report-status" value="   Status : string (pending)" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="report-entity">
+          <mxGeometry y="85" width="230" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="report-created" value="   CreatedAt : DateTime" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontSize=11;" vertex="1" parent="report-entity">
+          <mxGeometry y="107" width="230" height="22" as="geometry"/>
+        </mxCell>
+        <mxCell id="report-fk1" value="🔗 ReportedBy : int (FK → User.Id)" style="text;strokeColor=none;fillColor=#ffebee;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#b71c1c;fontSize=11;" vertex="1" parent="report-entity">
+          <mxGeometry y="129" width="230" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="report-fk2" value="🔗 SpotId : int? (FK → Spot.Id)" style="text;strokeColor=none;fillColor=#ffebee;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#b71c1c;fontSize=11;" vertex="1" parent="report-entity">
+          <mxGeometry y="149" width="230" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="report-fk3" value="🔗 CommentId : int? (FK → Comment.Id)" style="text;strokeColor=none;fillColor=#ffebee;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontColor=#b71c1c;fontSize=11;" vertex="1" parent="report-entity">
+          <mxGeometry y="169" width="230" height="20" as="geometry"/>
+        </mxCell>
+        
+        <!-- ========== RELATIONSHIPS ========== -->
+        
+        <!-- User 1:N Spot -->
+        <mxCell id="rel-user-spot" value="" style="endArrow=ERmany;startArrow=ERone;html=1;strokeWidth=2;strokeColor=#43a047;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="user-entity" target="spot-entity">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="440" y="430" as="sourcePoint"/>
+            <mxPoint x="600" y="430" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-user-spot-label" value="creates&#xa;1 : N" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontStyle=2;fontColor=#43a047;" vertex="1" parent="1">
+          <mxGeometry x="400" y="390" width="60" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Category 1:N Spot -->
+        <mxCell id="rel-cat-spot" value="" style="endArrow=ERmany;startArrow=ERone;html=1;strokeWidth=2;strokeColor=#f9a825;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="cat-entity" target="spot-entity">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="630" y="230" as="sourcePoint"/>
+            <mxPoint x="780" y="280" as="targetPoint"/>
+            <Array as="points">
+              <mxPoint x="540" y="260"/>
+              <mxPoint x="825" y="260"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-cat-spot-label" value="contains&#xa;1 : N" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontStyle=2;fontColor=#f9a825;" vertex="1" parent="1">
+          <mxGeometry x="650" y="245" width="60" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Spot 1:N SpotImage -->
+        <mxCell id="rel-spot-img" value="" style="endArrow=ERmany;startArrow=ERone;html=1;strokeWidth=2;strokeColor=#f57c00;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="spot-entity" target="img-entity">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel-spot-img-label" value="has&#xa;1 : N" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontStyle=2;fontColor=#f57c00;" vertex="1" parent="1">
+          <mxGeometry x="970" y="350" width="60" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- User 1:N SpotImage -->
+        <mxCell id="rel-user-img" value="" style="endArrow=ERmany;startArrow=ERone;html=1;strokeWidth=2;strokeColor=#43a047;dashed=1;exitX=1;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="user-entity" target="img-entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="300"/>
+              <mxPoint x="500" y="200"/>
+              <mxPoint x="1000" y="200"/>
+              <mxPoint x="1000" y="445"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Spot 1:N Comment -->
+        <mxCell id="rel-spot-comment" value="" style="endArrow=ERmany;startArrow=ERone;html=1;strokeWidth=2;strokeColor=#c2185b;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="spot-entity" target="comment-entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="825" y="620"/>
+              <mxPoint x="700" y="620"/>
+              <mxPoint x="700" y="722"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-spot-comment-label" value="receives&#xa;1 : N" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontStyle=2;fontColor=#c2185b;" vertex="1" parent="1">
+          <mxGeometry x="700" y="592" width="60" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- User 1:N Comment -->
+        <mxCell id="rel-user-comment" value="" style="endArrow=ERmany;startArrow=ERone;html=1;strokeWidth=2;strokeColor=#43a047;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="user-entity" target="comment-entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="190" y="600"/>
+              <mxPoint x="380" y="600"/>
+              <mxPoint x="380" y="722"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="rel-user-comment-label" value="writes&#xa;1 : N" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontStyle=2;fontColor=#43a047;" vertex="1" parent="1">
+          <mxGeometry x="240" y="575" width="60" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Spot 1:N Like -->
+        <mxCell id="rel-spot-like" value="" style="endArrow=ERmany;startArrow=ERone;html=1;strokeWidth=2;strokeColor=#8e24aa;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="spot-entity" target="like-entity">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="rel-spot-like-label" value="receives&#xa;1 : N" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=10;fontStyle=2;fontColor=#8e24aa;" vertex="1" parent="1">
+          <mxGeometry x="860" y="592" width="60" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- User 1:N Like -->
+        <mxCell id="rel-user-like" value="" style="endArrow=ERmany;startArrow=ERone;html=1;strokeWidth=2;strokeColor=#43a047;dashed=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="user-entity" target="like-entity">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="350" y="530"/>
+              <mxPoint x="350" y="700"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- User 1:N Report -->
+        <mxCell id="rel-user-report" value="" style="endArrow=ERmany;startArrow=ERone;html=1;strokeWidth=2;strokeColor=#e53935;dashed=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="report-entity">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="300" y="530" as="sourcePoint"/>
+            <Array as="points">
+              <mxPoint x="330" y="730"/>
+              <mxPoint x="960" y="730"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- ========== LEGEND ========== -->
+        <mxCell id="legend" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fafafa;strokeColor=#9e9e9e;" vertex="1" parent="1">
+          <mxGeometry x="1300" y="120" width="200" height="200" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="legend-title" value="LEGEND" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=14;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="130" width="80" height="25" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="leg1" value="🔑" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="160" width="30" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="leg1t" value="Primary Key (PK)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="160" width="100" height="20" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="leg2" value="🔗" style="text;html=1;strokeColor=none;fillColor=none;align=center;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="185" width="30" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="leg2t" value="Foreign Key (FK)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1350" y="185" width="100" height="20" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="leg3" value="" style="endArrow=ERmany;startArrow=ERone;html=1;strokeWidth=2;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1310" y="220" as="sourcePoint"/>
+            <mxPoint x="1350" y="220" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg3t" value="One-to-Many (1:N)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="210" width="110" height="20" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="leg4" value="" style="endArrow=ERmany;startArrow=ERone;html=1;strokeWidth=2;dashed=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1310" y="245" as="sourcePoint"/>
+            <mxPoint x="1350" y="245" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="leg4t" value="1:N (Optional)" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1360" y="235" width="100" height="20" as="geometry"/>
+        </mxCell>
+        
+        <mxCell id="leg5t" value="Cascade Delete: ✓" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="270" width="110" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="leg6t" value="Restrict Delete: ✗" style="text;html=1;strokeColor=none;fillColor=none;align=left;fontSize=10;" vertex="1" parent="1">
+          <mxGeometry x="1310" y="290" width="110" height="20" as="geometry"/>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
+
+
+
+

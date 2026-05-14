@@ -1,0 +1,245 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|c:\\users\\hussein.alghafri\\source\\repos\\photospotoman\\photospotoman\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|solutionrelative:photospotoman\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|c:\\users\\hussein.alghafri\\source\\repos\\photospotoman\\photospotoman\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|solutionrelative:photospotoman\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|c:\\users\\hussein.alghafri\\source\\repos\\photospotoman\\photospotoman\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|solutionrelative:photospotoman\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|c:\\users\\hussein.alghafri\\source\\repos\\photospotoman\\photospotoman\\views\\spot\\myspot.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|solutionrelative:photospotoman\\views\\spot\\myspot.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|c:\\users\\hussein.alghafri\\source\\repos\\photospotoman\\photospotoman\\views\\spot\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|solutionrelative:photospotoman\\views\\spot\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|c:\\users\\hussein.alghafri\\source\\repos\\photospotoman\\photospotoman\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|solutionrelative:photospotoman\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|c:\\users\\hussein.alghafri\\source\\repos\\photospotoman\\photospotoman\\views\\feedbacks\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|solutionrelative:photospotoman\\views\\feedbacks\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|c:\\users\\hussein.alghafri\\source\\repos\\photospotoman\\photospotoman\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|solutionrelative:photospotoman\\views\\category\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|c:\\users\\hussein.alghafri\\source\\repos\\photospotoman\\photospotoman\\views\\page\\forbidden.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|solutionrelative:photospotoman\\views\\page\\forbidden.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|c:\\users\\hussein.alghafri\\source\\repos\\photospotoman\\photospotoman\\views\\spot\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|solutionrelative:photospotoman\\views\\spot\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|c:\\users\\hussein.alghafri\\source\\repos\\photospotoman\\photospotoman\\views\\category\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|solutionrelative:photospotoman\\views\\category\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|c:\\users\\hussein.alghafri\\source\\repos\\photospotoman\\photospotoman\\views\\spot\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|solutionrelative:photospotoman\\views\\spot\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|c:\\users\\hussein.alghafri\\source\\repos\\photospotoman\\photospotoman\\views\\spot\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|solutionrelative:photospotoman\\views\\spot\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|c:\\users\\hussein.alghafri\\source\\repos\\photospotoman\\photospotoman\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{391D33F8-58FD-449A-A252-2918EFFF1810}|PhotoSpotOman\\PhotoSpotOman.csproj|solutionrelative:photospotoman\\views\\category\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "PhotoSpotOman\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "PhotoSpotOman\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAF4BAAAAAAAAAAAlwG0BAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2026-01-26T11:19:35.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "PhotoSpotOman\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "PhotoSpotOman\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAKoAAAAAAAAAAAAWwLAAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-26T11:17:02.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "PhotoSpotOman\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "PhotoSpotOman\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAABQAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-26T11:17:59.756Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MySpot.cshtml",
+              "DocumentMoniker": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Spot\\MySpot.cshtml",
+              "RelativeDocumentMoniker": "PhotoSpotOman\\Views\\Spot\\MySpot.cshtml",
+              "ToolTip": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Spot\\MySpot.cshtml",
+              "RelativeToolTip": "PhotoSpotOman\\Views\\Spot\\MySpot.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAIAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-26T11:17:57.991Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Spot\\Index.cshtml",
+              "RelativeDocumentMoniker": "PhotoSpotOman\\Views\\Spot\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Spot\\Index.cshtml",
+              "RelativeToolTip": "PhotoSpotOman\\Views\\Spot\\Index.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAIAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-26T11:17:55.985Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "PhotoSpotOman\\Views\\Login\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "PhotoSpotOman\\Views\\Login\\Index.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAIAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-26T11:17:54.013Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Feedbacks\\Index.cshtml",
+              "RelativeDocumentMoniker": "PhotoSpotOman\\Views\\Feedbacks\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Feedbacks\\Index.cshtml",
+              "RelativeToolTip": "PhotoSpotOman\\Views\\Feedbacks\\Index.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAIAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-26T11:17:52.667Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Category\\Index.cshtml",
+              "RelativeDocumentMoniker": "PhotoSpotOman\\Views\\Category\\Index.cshtml",
+              "ToolTip": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Category\\Index.cshtml",
+              "RelativeToolTip": "PhotoSpotOman\\Views\\Category\\Index.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAIAAAA0AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-26T11:17:51.658Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Forbidden.cshtml",
+              "DocumentMoniker": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Page\\Forbidden.cshtml",
+              "RelativeDocumentMoniker": "PhotoSpotOman\\Views\\Page\\Forbidden.cshtml",
+              "ToolTip": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Page\\Forbidden.cshtml",
+              "RelativeToolTip": "PhotoSpotOman\\Views\\Page\\Forbidden.cshtml",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAEAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-26T11:17:50.508Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Spot\\Edit.cshtml",
+              "RelativeDocumentMoniker": "PhotoSpotOman\\Views\\Spot\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Spot\\Edit.cshtml",
+              "RelativeToolTip": "PhotoSpotOman\\Views\\Spot\\Edit.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAIAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-26T11:17:49.219Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Category\\Edit.cshtml",
+              "RelativeDocumentMoniker": "PhotoSpotOman\\Views\\Category\\Edit.cshtml",
+              "ToolTip": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Category\\Edit.cshtml",
+              "RelativeToolTip": "PhotoSpotOman\\Views\\Category\\Edit.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAIAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-26T11:17:47.954Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Details.cshtml",
+              "DocumentMoniker": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Spot\\Details.cshtml",
+              "RelativeDocumentMoniker": "PhotoSpotOman\\Views\\Spot\\Details.cshtml",
+              "ToolTip": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Spot\\Details.cshtml",
+              "RelativeToolTip": "PhotoSpotOman\\Views\\Spot\\Details.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAIAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-26T11:17:46.423Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Spot\\Create.cshtml",
+              "RelativeDocumentMoniker": "PhotoSpotOman\\Views\\Spot\\Create.cshtml",
+              "ToolTip": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Spot\\Create.cshtml",
+              "RelativeToolTip": "PhotoSpotOman\\Views\\Spot\\Create.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAIAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-26T11:17:45.218Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Category\\Create.cshtml",
+              "RelativeDocumentMoniker": "PhotoSpotOman\\Views\\Category\\Create.cshtml",
+              "ToolTip": "C:\\Users\\hussein.alghafri\\source\\repos\\PhotoSpotOman\\PhotoSpotOman\\Views\\Category\\Create.cshtml",
+              "RelativeToolTip": "PhotoSpotOman\\Views\\Category\\Create.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAAAAIAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-01-26T11:17:43.126Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

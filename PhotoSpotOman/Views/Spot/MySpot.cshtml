@@ -1,0 +1,85 @@
+@model IEnumerable<PhotoSpotOman.Models.Spot>
+@{
+    ViewData["Title"] = "My Spots - PhotoSpot Oman";
+}
+
+<div class="spots-page">
+    <div class="container py-5">
+        <div class="page-header mb-4">
+            <h1 class="page-title">My Spots</h1>
+            <p class="page-subtitle">Manage your photo spots</p>
+            <a asp-action="Create" class="btn btn-primary-custom mt-3">
+                <i class='bx bx-plus'></i> Add New Spot
+            </a>
+        </div>
+
+        @if (Model != null && Model.Any())
+        {
+            <div class="row g-4">
+                @foreach (var spot in Model)
+                {
+                    <div class="col-md-6 col-lg-4">
+                        <div class="spot-card-admin">
+                            @if (spot.Images != null && spot.Images.Any())
+                            {
+                                <div class="spot-image-wrapper">
+                                    <img src="@spot.Images.First().ImagePath" alt="@spot.Name" />
+                                    <div class="spot-status-badge status-@spot.Status.ToLower()">
+                                        @spot.Status
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="spot-image-wrapper no-image">
+                                    <i class='bx bx-image'></i>
+                                    <div class="spot-status-badge status-@spot.Status.ToLower()">
+                                        @spot.Status
+                                    </div>
+                                </div>
+                            }
+
+                            <div class="spot-card-body">
+                                <h3 class="spot-card-title">@spot.Name</h3>
+                                <p class="spot-card-description">@(spot.Description.Length > 100 ? spot.Description.Substring(0, 100) + "..." : spot.Description)</p>
+                                
+                                <div class="spot-card-meta">
+                                    <span><i class='bx bx-category'></i> @spot.Category?.Name</span>
+                                    <span><i class='bx bx-heart'></i> @(spot.Likes?.Count ?? 0)</span>
+                                    <span><i class='bx bx-comment'></i> @(spot.Comments?.Count ?? 0)</span>
+                                </div>
+
+                                <div class="spot-card-actions">
+                                    <a asp-action="Details" asp-route-id="@spot.Id" class="btn btn-sm btn-primary-custom">
+                                        <i class='bx bx-show'></i> View
+                                    </a>
+                                    <a asp-action="Edit" asp-route-id="@spot.Id" class="btn btn-sm btn-secondary-custom">
+                                        <i class='bx bx-edit'></i> Edit
+                                    </a>
+                                    <form asp-action="Delete" method="post" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this spot?');">
+                                        <input type="hidden" name="id" value="@spot.Id" />
+                                        <button type="submit" class="btn btn-sm btn-danger-custom">
+                                            <i class='bx bx-trash'></i> Delete
+                                        </button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="empty-state">
+                <i class='bx bx-map'></i>
+                <h3>No spots yet</h3>
+                <p>Start sharing your favorite photo spots in Oman!</p>
+                <a asp-action="Create" class="btn btn-primary-custom mt-3">
+                    <i class='bx bx-plus'></i> Create Your First Spot
+                </a>
+            </div>
+        }
+    </div>
+</div>
+

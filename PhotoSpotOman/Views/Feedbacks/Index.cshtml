@@ -1,0 +1,81 @@
+@model IEnumerable<PhotoSpotOman.Models.Comment>
+@{
+    ViewData["Title"] = "Comments - PhotoSpot Oman";
+    var spotId = ViewBag.SpotId as int?;
+    var spots = ViewBag.Spots as List<PhotoSpotOman.Models.Spot> ?? new List<PhotoSpotOman.Models.Spot>();
+}
+
+<div class="spots-page">
+    <div class="container py-5">
+        <div class="page-header mb-4">
+            <h1 class="page-title">Comments Management</h1>
+            <p class="page-subtitle">Review and manage all comments</p>
+        </div>
+
+        <!-- Filters -->
+        <div class="filters-card mb-4">
+            <form method="get" class="row g-3">
+                <div class="col-md-6">
+                    <label class="form-label">Filter by Spot</label>
+                    <select name="spotId" class="form-control-custom" onchange="this.form.submit()">
+                        <option value="">All Spots</option>
+                        @foreach (var spot in spots)
+                        {
+                            if (spotId == spot.Id)
+                            {
+                                <option value="@spot.Id" selected>@spot.Name</option>
+                            }
+                            else
+                            {
+                                <option value="@spot.Id">@spot.Name</option>
+                            }
+                        }
+                    </select>
+                </div>
+                <div class="col-md-6 d-flex align-items-end">
+                    <a asp-action="Index" class="btn btn-secondary-custom">
+                        <i class='bx bx-refresh'></i> Clear Filter
+                    </a>
+                </div>
+            </form>
+        </div>
+
+        @if (Model != null && Model.Any())
+        {
+            <div class="comments-list">
+                @foreach (var comment in Model)
+                {
+                    <div class="comment-item-admin">
+                        <div class="comment-header-admin">
+                            <div>
+                                <strong>@comment.User?.Name</strong>
+                                <span class="comment-date">@comment.CreatedAt.ToString("MMM dd, yyyy HH:mm")</span>
+                            </div>
+                            <div class="comment-spot-info">
+                                <i class='bx bx-map-pin'></i> <a asp-controller="Spot" asp-action="Details" asp-route-id="@comment.SpotId">@comment.Spot?.Name</a>
+                            </div>
+                        </div>
+                        <div class="comment-content">@comment.Content</div>
+                        <div class="comment-actions">
+                            <form asp-action="Delete" method="post" class="d-inline" onsubmit="return confirm('Are you sure you want to delete this comment?');">
+                                <input type="hidden" name="id" value="@comment.Id" />
+                                <button type="submit" class="btn btn-sm btn-danger-custom">
+                                    <i class='bx bx-trash'></i> Delete
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        else
+        {
+            <div class="empty-state">
+                <i class='bx bx-comment'></i>
+                <h3>No comments found</h3>
+                <p>@(spotId.HasValue ? "No comments for this spot yet." : "No comments in the system yet.")</p>
+            </div>
+        }
+    </div>
+</div>
+
